@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('other.about');
     }
+
+    public function master()
+    {
+        return view('other.master');
+    }
 }
