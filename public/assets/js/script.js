@@ -15,6 +15,42 @@ try {
 } catch (error) {
     console.log(error)
 }
+function setHeightItem(){
+    document.querySelectorAll('.content__accordion__item').forEach((item) => {
+        const itemInfo = item.querySelector('.content__accordion__item__desc');
+        itemInfo.style.height = 'auto';
+
+        let paddingTop = 24/14.4;
+        if(window.innerWidth <1025){
+            paddingTop = 24/3.75;
+        }else if(window.innerWidth> 1441){
+            paddingTop = 24;
+        }
+
+        itemInfo.style.setProperty('--infoHeight', itemInfo.offsetHeight + paddingTop + "px");
+        itemInfo.style.height = '';
+    })
+}
+try {
+    window.onload = function() {
+        document.querySelectorAll('.content__accordion__item').forEach((el) => {
+          el.addEventListener('click',()=>{
+            if(el.classList.contains('content__accordion__item_open')){
+                el.closest('.content__accordion__item').classList.remove('content__accordion__item_open');
+            }else{
+                el.closest('.content__accordion__item').classList.add('content__accordion__item_open');
+            }
+
+          })
+        })
+        setHeightItem();
+    };
+    window.onresize = setHeightItem;
+} catch (error) {
+    console.log(error)
+}
+
+
 window.addEventListener('scroll', function(e) {
     if(window.scrollY > 50){
         document.querySelector('.nav').classList.add('navFixed');
