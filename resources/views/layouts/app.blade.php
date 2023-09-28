@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('assets/js/owl/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/js/owl/assets/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/content.css') }}">
 
     @yield('custom-style')
 </head>
