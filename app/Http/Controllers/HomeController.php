@@ -13,7 +13,14 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('about');
+        $this->middleware('auth')->except([
+            'about',
+            'master',
+            'blog',
+            'article',
+            'master_practitioner',
+            'practitioner'
+        ]);
     }
 
     /**
@@ -34,5 +41,25 @@ class HomeController extends Controller
     public function master()
     {
         return view('other.master');
+    }
+
+    public function blog()
+    {
+        return view('other.blog');
+    }
+
+    public function master_practitioner()
+    {
+        return view('other.master-practitioner');
+    }
+
+    public function practitioner()
+    {
+        return view('other.practitioner');
+    }
+
+    public function article()
+    {
+        return view('other.article');
     }
 }
