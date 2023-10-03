@@ -530,7 +530,7 @@
   }
 }
 .login__form__wrapper a {
-  transition: 0s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 .login__form__wrapper a:hover {
   color: #3B2463;
@@ -582,7 +582,7 @@
   background-position: center center;
   background-size: 50% 50%;
   background-color: white;
-  transition: 0s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1024px) {
   .login__form .checkbox .custom-checkbox > p::before {
