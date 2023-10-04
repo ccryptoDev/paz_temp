@@ -3,16 +3,6 @@
 @import "../mixin/font-mixin";
 @import "../mixin/mixins";
 
-.nav{
-    &::before{
-        box-shadow:none;
-        opacity: 0;
-    }
-    &Fixed::before{
-        opacity: 1;
-        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
-    }
-}
 .about{
     @include param(padding-top,78,24);
     .h1{
