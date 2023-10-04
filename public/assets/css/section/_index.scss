@@ -3,16 +3,6 @@
 @import "../mixin/font-mixin";
 @import "../mixin/mixins";
 
-.nav{
-    &::before{
-        box-shadow:none;
-        opacity: 0;
-    }
-    &Fixed::before{
-        opacity: 1;
-        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
-    }
-}
 .div1{
     @include param(padding-top,130,24);
     @include param(margin-bottom,90,44);
@@ -62,6 +52,9 @@
             @media screen and (max-width: 1024px) {
                 background: url(../img/template/bgAngle1Mb.svg) no-repeat;
                 background-size: contain;
+            }
+            @media screen and (min-width: 1440px) {
+                left: calc( -1 * (100vw - 1264px) / 2 );
             }
         }
     }
@@ -144,6 +137,9 @@
             background: url(../img/template/bgAngle4.svg) no-repeat;
             background-size: contain;
             z-index: -1;
+            @media screen and (min-width: 1440px) {
+                right: calc( -1 * (100vw - 1264px) / 2 );
+            }
         }
     }
     &__top{
@@ -185,16 +181,6 @@
         }
         .owl-item{
             @include param(padding-right,72,0);
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            @include param(width,32,0);
-            height: 100%;
-            right: 0;
-            top: 0;
-            background: #EEEEF2;
-            z-index: 1;
         }
     }
     &__item{
@@ -295,6 +281,9 @@
             background: url(../img/template/bgAngle5.svg) no-repeat;
             background-size: contain;
             z-index: -1;
+            @media screen and (min-width: 1440px) {
+                right: calc( -1 * (100vw - 1264px) / 2 );
+            }
         }
     }
     &__wrapper{
@@ -411,6 +400,10 @@
             background: url(../img/template/bgBottomIndex.svg) no-repeat;
             background-size: contain;
             z-index: -1;
+            @media screen and (min-width: 1440px) {
+                left: calc( -1 * (100vw - 1264px) / 2 );
+                right:auto;
+            }
         }
     }
     &__btn{

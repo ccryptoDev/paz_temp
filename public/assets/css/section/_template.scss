@@ -264,7 +264,7 @@ body{
             @media screen and (max-width: 1024px) {
                 margin-bottom: mb(24);
                 justify-content: center;
-            }
+            } 
         }
         .nav__profile span{
             @media screen and (max-width: 1024px) {
@@ -355,8 +355,8 @@ body{
             content: '';
             background: url(../img/template/sliderArrow.svg) no-repeat;
             background-size: contain;
-            @include param(width,10,10);
-            @include param(height,16,16);
+            @include param(width,10,10); 
+            @include param(height,16,16); 
             display: inline-flex;
             transform: rotate(180deg);
         }
