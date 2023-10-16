@@ -1,4 +1,13 @@
 <header class="header">
+    @if( request()->is('blog') || request()->is('master-practitioner') )
+        <div class="header__bg">
+            <picture class="header__bg__img">
+                <source media="(max-width: 1024px)" srcset="{{asset('assets/img/template/headerBgMb.svg')}}">
+                <source media="(min-width: 1025px)" srcset="{{asset('assets/img/template/headerBg.svg')}}">
+                <img alt="" src="{{asset('assets/img/template/headerBg.svg')}}" alt="">
+            </picture>
+        </div>
+    @endif
     <nav class="nav">
         <div class="container">
             <div class="nav__wrapper">
