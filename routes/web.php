@@ -18,8 +18,12 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/home', function () {
     return redirect('/');
 });
-Route::get('/about',[\App\Http\Controllers\HomeController::class,'about']);
-Route::get('/master',[\App\Http\Controllers\HomeController::class,'master']);
+Route::get('/about',[\App\Http\Controllers\HomeController::class, 'about']);
+Route::get('/master',[\App\Http\Controllers\HomeController::class, 'master']);
+Route::get('/master-practitioner',[\App\Http\Controllers\HomeController::class, 'master_practitioner']);
+Route::get('/blog', [\App\Http\Controllers\HomeController::class, 'blog']);
+Route::get('/article', [\App\Http\Controllers\HomeController::class, 'article']);
+Route::get('/practitioner', [\App\Http\Controllers\HomeController::class, 'practitioner']);
 
 Auth::routes();
 Route::get('auth/google', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle']);
