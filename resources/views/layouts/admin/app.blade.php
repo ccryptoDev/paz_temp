@@ -16,7 +16,8 @@ License: For each use you must have a valid license purchased only from above li
 <head>
     <base href=""/>
     <title>Paz Courses</title>
-    <meta charset="utf-8"/>
+
+    <!-- <meta charset="utf-8"/>
     <meta name="description"
           content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free."/>
     <meta name="keywords"
@@ -28,7 +29,8 @@ License: For each use you must have a valid license purchased only from above li
           content="Metronic - Bootstrap Admin Template, HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template"/>
     <meta property="og:url" content="https://keenthemes.com/metronic"/>
     <meta property="og:site_name" content="Keenthemes | Metronic"/>
-    <link rel="canonical" href="https://preview.keenthemes.com/metronic8"/>
+    <link rel="canonical" href="https://preview.keenthemes.com/metronic8"/> -->
+
     <link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}"/>
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>
