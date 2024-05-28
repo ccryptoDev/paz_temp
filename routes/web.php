@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,10 @@ Route::get('/practitioner', [\App\Http\Controllers\HomeController::class, 'pract
 Auth::routes();
 Route::get('auth/google', [\App\Http\Controllers\Auth\LoginController::class, 'redirectToGoogle']);
 Route::get('auth/google/callback', [\App\Http\Controllers\Auth\LoginController::class, 'handleGoogleCallback']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::prefix('admin')->group(function () {
-    Route::get('/dashboard',[\App\Http\Controllers\Admin\DashboardController::class,'index']);
+Route::prefix('admin')->middleware('auth.admin')->group(function () {
+    Route::get('/dashboard',[\App\Http\Controllers\Admin\DashboardController::class,'index'])->name('admin.dashboard');
     Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class);
     Route::get('/courses/{id}/statistic', [\App\Http\Controllers\Admin\CourseController::class, 'statistic']);
     Route::get('/courses/{course_id}/{chapter_id}/lessons',[\App\Http\Controllers\Admin\LessonController::class,'index']);

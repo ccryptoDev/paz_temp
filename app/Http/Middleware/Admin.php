@@ -20,8 +20,8 @@ class Admin
             if (auth()->user()->role == "paz") {
                 return $next($request);
             }
-            return redirect()->home();
+            return redirect()->route('home');
         }
-        return redirect()->home();
+        return redirect()->route('home');
     }
 }

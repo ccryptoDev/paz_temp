@@ -31,7 +31,8 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -71,6 +72,26 @@ class LoginController extends Controller
             ]);
 
             Auth::login($authUser, true);
+        }
+
+        return redirect()->route('home');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        \Log::info('User logged in: ', ['user' => $user]);
+
+        if ($user->role === 'paz') {
+            return redirect()->route('admin.dashboard');
         }
 
         return redirect()->route('home');
