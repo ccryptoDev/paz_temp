@@ -345,6 +345,20 @@
             margin-right: mb(-20);
             width: 100vw;
         }
+        .photo_green{
+            @include param(height,661,416);
+           .photo__wrapper{
+                @include param(height,661,416);
+                transition: $transition;
+                transition-duration: 1s;
+            } 
+        }
+        .photo_animation{
+            .photo__wrapper{
+                @include param(top,-100,0);
+                @include param(right,35,0);
+            }
+        }
     }
     &__desc{
         @include font(400,24,32,20,30);
@@ -419,14 +433,14 @@
             z-index: 0;
         }
         .photo_green{
-            @include param(width,664,375);
+            @include param(width,680,375);
             .photo__wrapper::after {
-                border-width: 0 dp(298) dp(621) 0;
+                border-width: 0 dp(317) dp(661) 0;
                 @media screen and (max-width: 1024px) {
                     border-width: mb(159) mb(444) 0 0;
                 }
                 @media screen and (min-width: 1440px){
-                    border-width: 0 298px 621px 0;
+                    border-width: 0 317px 661px 0;
                 }
             }
         }

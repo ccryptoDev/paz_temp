@@ -1163,6 +1163,58 @@
     width: 100vw;
   }
 }
+.div4__wrapper .photo_green {
+  height: 45.9027777778vw;
+}
+@media screen and (max-width: 1024px) {
+  .div4__wrapper .photo_green {
+    height: 110.9333333333vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .div4__wrapper .photo_green {
+    height: 661px;
+  }
+}
+.div4__wrapper .photo_green .photo__wrapper {
+  height: 45.9027777778vw;
+  transition: 0.3s all ease-in-out;
+  transition-duration: 1s;
+}
+@media screen and (max-width: 1024px) {
+  .div4__wrapper .photo_green .photo__wrapper {
+    height: 110.9333333333vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .div4__wrapper .photo_green .photo__wrapper {
+    height: 661px;
+  }
+}
+.div4__wrapper .photo_animation .photo__wrapper {
+  top: -6.9444444444vw;
+  right: 2.4305555556vw;
+}
+@media screen and (max-width: 1024px) {
+  .div4__wrapper .photo_animation .photo__wrapper {
+    top: 0vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .div4__wrapper .photo_animation .photo__wrapper {
+    top: -100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .div4__wrapper .photo_animation .photo__wrapper {
+    right: 0vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .div4__wrapper .photo_animation .photo__wrapper {
+    right: 35px;
+  }
+}
 .div4__desc {
   font-weight: 400;
   font-size: 1.6666666667vw;
@@ -1418,7 +1470,7 @@
   }
 }
 .div4__img .photo_green {
-  width: 46.1111111111vw;
+  width: 47.2222222222vw;
 }
 @media screen and (max-width: 1024px) {
   .div4__img .photo_green {
@@ -1427,11 +1479,11 @@
 }
 @media screen and (min-width: 1440px) {
   .div4__img .photo_green {
-    width: 664px;
+    width: 680px;
   }
 }
 .div4__img .photo_green .photo__wrapper::after {
-  border-width: 0 20.6944444444vw 43.125vw 0;
+  border-width: 0 22.0138888889vw 45.9027777778vw 0;
 }
 @media screen and (max-width: 1024px) {
   .div4__img .photo_green .photo__wrapper::after {
@@ -1440,7 +1492,7 @@
 }
 @media screen and (min-width: 1440px) {
   .div4__img .photo_green .photo__wrapper::after {
-    border-width: 0 298px 621px 0;
+    border-width: 0 317px 661px 0;
   }
 }
 

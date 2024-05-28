@@ -381,6 +381,20 @@
             z-index: 0;
         }
     }
+    .photo_green{
+        @include param(height,676,416);
+       .photo__wrapper{
+            @include param(height,676,416);
+            transition: $transition;
+            transition-duration: 1s;
+        } 
+    }
+    .photo_animation{
+        .photo__wrapper{
+            @include param(top,-124,0);
+            @include param(right,62,0);
+        }
+    }
 }
 .div5{
     @include param(margin-bottom,105,70);

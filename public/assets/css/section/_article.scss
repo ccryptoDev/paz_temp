@@ -180,6 +180,20 @@
             border-top-left-radius: mb(45);
             border-bottom-right-radius: mb(45);
         }
+        .photo_green{
+            @include param(height,661,416);
+           .photo__wrapper{
+                @include param(height,661,416);
+                transition: $transition;
+                transition-duration: 1s;
+            } 
+        }
+        .photo_animation{
+            .photo__wrapper{
+                @include param(top,-100,0);
+                @include param(right,35,0);
+            }
+        }
     }
     .h2{
         @include param(margin-bottom,24,27);
@@ -253,14 +267,14 @@
             z-index: 0;
         }
         .photo_green{
-            @include param(width,585,375);
+            @include param(width,602,375);
             .photo__wrapper::after {
-                border-width: 0 dp(263) dp(621) 0;
+                border-width: 0 dp(280) dp(661) 0;
                 @media screen and (max-width: 1024px) {
                     border-width: mb(159) mb(444) 0 0;
                 }
                 @media screen and (min-width: 1440px){
-                    border-width: 0 263px 621px 0;
+                    border-width: 0 280px 661px 0;
                 }
             }
         }

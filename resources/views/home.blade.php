@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="div4__img">
-                    <div class="photo photo_green">
+                    <div class="photo photo_green photo_animation">
                         <div class="photo__wrapper">
                             <img src="{{ asset('assets/img/content/index/Rectangle1253.jpg') }}" alt=""
                                 class="photo__img">

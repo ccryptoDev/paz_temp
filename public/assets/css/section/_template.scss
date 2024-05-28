@@ -397,6 +397,8 @@ body{
     &__shape{
         position: absolute;
         z-index: 2;
+        transition: $transition;
+        transition-duration: 1s;
     }
     &_yellow{
         &_left{
@@ -428,6 +430,10 @@ body{
                 @include param(height,500,274);
                 @include param(top,-62,-35);
             }
+            &.photo_animation .photo__shape{
+                @include param(top,0,0);
+                @include param(left,16,7);
+            }
         }
     }
     &_orange{
@@ -456,14 +462,18 @@ body{
             }
             .photo__shape{
                 @include param(left,0,0);
-                @include param(width,508,315);
-                @include param(height,255,154);
+                @include param(width,513,316);
+                @include param(height,257,159);
                 @include param(bottom,0,0);
+            }
+            &.photo_animation .photo__shape{
+                @include param(bottom,30,11);
+                @include param(left,51,20);
             }
         }
     }
     &_green{
-        @include param(width,664,375);
+        @include param(width,693,375);
         @include param(height,621,416);
         .photo__wrapper{
             @include param(border-top-left-radius,63,0);
@@ -473,7 +483,7 @@ body{
             top: 0;
             &::after{
                 content: '';
-                border-width: 0 dp(306) dp(621) 0;
+                border-width: 0 dp(332) dp(676) 0;
                 border-color: transparent #FFF transparent transparent;
                 right: 0;
                 top: 0;
@@ -484,7 +494,7 @@ body{
                     top: mb(-1);
                 }
                 @media screen and (min-width: 1440px){
-                    border-width: 0 306px 621px 0;
+                    border-width: 0 332px 676px 0;
                 }
             }
             &::before{
@@ -528,9 +538,13 @@ body{
         }
         .photo__shape{
             @include param(left,0,0);
-            @include param(width,500,299.63);
-            @include param(height,508,304);
-            @include param(bottom,0,0);
+            @include param(width,514,300);
+            @include param(height,530,304);
+            @include param(bottom,-7,0);
+        }
+        &.photo_animation .photo__shape{
+            @include param(bottom,-48,-21);
+            @include param(left,44,27);
         }
     }
 }
