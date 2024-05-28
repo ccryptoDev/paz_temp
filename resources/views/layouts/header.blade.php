@@ -34,7 +34,16 @@
                     </ul>
                 </div>
                 <div class="nav__buttons">
-                    <a class="nav__profile" href=""><span>התחברות</span></a>
+                    @auth
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                            @csrf
+                            <div id="logout-button" class="nav__profile"><span>להתנתק</span></div>
+                        </form>
+                        {{-- <a class="nav__profile" href="{{ route('logout') }}"><span>להתנתק</span></a> --}}
+                        <input type="hidden" name="user_name" value="{{ auth()->user()->name }}">
+                    @else
+                        <a class="nav__profile" href="{{ route('login') }}"><span>התחברות</span></a>
+                    @endauth
                     <a class="btn" href="">להתחיל</a>
                 </div>
                 <button class="nav__burger_link"></button>

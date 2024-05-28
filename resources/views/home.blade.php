@@ -252,5 +252,9 @@
     <script>
         let user = "{{auth()->user()->name}}";
         console.log('user',user);
+
+        document.getElementById('logout-button').addEventListener('click', function() {
+            document.getElementById('logout-form').submit();
+        });
     </script>
 @endsection
