@@ -501,6 +501,7 @@ body::-webkit-scrollbar-thumb {
   display: inline-flex;
   align-items: center;
   margin-left: 2.2222222222vw;
+  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
   .nav__profile {
