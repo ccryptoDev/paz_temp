@@ -19,7 +19,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('/home', function () {
     return redirect('/');
 });
-Route::get('/about',[\App\Http\Controllers\HomeController::class, 'about']);
+Route::get('/about',[\App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/master',[\App\Http\Controllers\HomeController::class, 'master']);
 Route::get('/master-practitioner',[\App\Http\Controllers\HomeController::class, 'master_practitioner']);
 Route::get('/blog', [\App\Http\Controllers\HomeController::class, 'blog']);

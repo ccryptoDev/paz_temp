@@ -20,7 +20,7 @@
                 <div class="nav__menu">
                     <ul class="nav__menu__list">
                         <li class="nav__menu__item">
-                            <a class="nav__menu__item__link">עלינו</a>
+                            <a href="{{ route('about') }}" class="nav__menu__item__link">עלינו</a>
                         </li>
                         <li class="nav__menu__item">
                             <a class="nav__menu__item__link">אנשי קשר</a>
